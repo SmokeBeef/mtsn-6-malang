@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, GridItem, Image, SimpleGrid } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 // And react-slick as our Carousel Lib
