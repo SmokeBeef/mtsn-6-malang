@@ -235,8 +235,4 @@ const NAV_ITEMS: Array<NavItem> = [
         label: 'Galery',
         href: '#galery'
     },
-    {
-        label: 'Hire Designers',
-        href: '#',
-    },
 ];
