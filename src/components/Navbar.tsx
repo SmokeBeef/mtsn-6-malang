@@ -13,6 +13,7 @@ import {
     useColorModeValue,
     useDisclosure,
     Image,
+    Container,
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -26,6 +27,7 @@ export default function Navbar() {
 
     return (
         <Box position={'sticky'} top={0} zIndex={100}>
+
             <Flex
                 bg={useColorModeValue('blue.400', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
@@ -36,32 +38,36 @@ export default function Navbar() {
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
                 align={'center'}>
+                <Container
+                    display={'flex'}
+                    maxW={'8xl'}>
+                    <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
 
-                <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
-
-                    <Link href='/'>
-                        <Image h={10} src='/logomtsnlawang.png' />
-                    </Link>
+                        <Link href='/'>
+                            <Image h={10} src='/logomtsnlawang.png' />
+                        </Link>
 
 
-                    <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-                        <DesktopNav />
+                        <Flex display={{ base: 'none', md: 'flex' }} alignItems={'center'} ml={10}>
+                            <DesktopNav />
+                        </Flex>
                     </Flex>
-                </Flex>
-                <Flex
-                    flex={{ md: 'auto' }}
-                    ml={{ base: -2 }}
-                    display={{ base: 'flex', md: 'none' }}>
-                    <IconButton
-                        onClick={onToggle}
-                        icon={
-                            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-                        }
-                        variant={'ghost'}
-                        aria-label={'Toggle Navigation'}
-                    />
-                </Flex>
+                    <Flex
+                        flex={{ md: 'auto' }}
+                        ml={{ base: -2 }}
+                        display={{ base: 'flex', md: 'none' }}>
+                        <IconButton
+                            onClick={onToggle}
+                            icon={
+                                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+                            }
+                            variant={'ghost'}
+                            aria-label={'Toggle Navigation'}
+                        />
+                    </Flex>
 
+
+                </Container>
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>
