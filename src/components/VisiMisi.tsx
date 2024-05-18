@@ -1,5 +1,4 @@
-import { Card, CardBody, CardHeader, Container, Flex, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Card, CardBody, CardHeader, Container, Flex, ListItem, OrderedList, Text } from '@chakra-ui/react'
 
 export default function VisiMisi() {
     return (
